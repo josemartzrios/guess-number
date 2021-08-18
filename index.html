@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Guess the number game</title>
+</head>
+<body onload="init()">
+
+    <main>
+        <div id="welcomeScreen">
+            <h2>Adivina el número al azar<br> Entre 1-100</h2>
+            
+            <section>
+                <p>
+                    Selecciona la dificultad:
+                </p>
+                
+                <div class="buttonWrapper">
+                    <!-- Botones de dificultades -->
+                    <!-- Llamó a las funciones con onclick -->
+                    <button onclick="easyMode()">Fácil: 10 intentos</button>
+                    <button onclick="hardMode()">Difícil: 5 intentos</button>
+                </div>
+                
+            </section>
+        </div>
+
+        <div id="gameArea">
+            <!-- Botón de nuevo juego -->
+            <button id="newGameButton" onclick="newGame()">NUEVO JUEGO</button>
+            <section>
+
+                <h3 id="textOutput">Adivina:</h3>
+
+                <!-- Botón para escribir número (1-100) -->
+                <input 
+                    type="number" 
+                    id="inputBox" 
+                    min="1" 
+                    max="100"
+                    onchange="compareGuess()"
+                    
+                />
+                
+
+            </section>
+
+            <section>
+
+                <p>Rango actual:</p>
+                <span id="rangeOutput">Entre 1-100</span>
+
+                <!-- Rango de adivinanza -->
+                <div id="range">
+
+                    <!-- COlores de la línea de rango -->
+                    <span id="low"></span>
+                    <span id="space"></span>
+                    <span id="high"></span>
+                </div>
+            </section>
+
+            <section class="stats">
+
+                <!-- Cuantos intentos -->
+                <div class="info">
+                    <p>Número de intentos</p>
+                    <span id="attempts">0</span>
+                </div>
+
+
+                <!-- intentos del usuario -->
+                <div class="info">
+                    <p>Tus intentos previos</p>
+                    <span id="guesses">-</span>
+                </div>
+            
+
+
+
+            </section>
+
+
+        </div>
+
+        <p class="myProject">Proyecto de José Martínez Ríos &copy;</p>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

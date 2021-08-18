@@ -1,0 +1,136 @@
+
+/* VARIABLES CSS */
+:root{
+    --green: #83e1d0;
+    --red: #ef7b54;
+}
+
+
+html{
+    font-weight: 300;
+}
+
+body{
+    width: 90vw;
+    margin: 0 auto;
+    background: radial-gradient(#343e63, #2a3352);
+}
+
+main{
+    text-align: center;
+    background: #f8f1e9;
+    border: solid #ef7b54;
+    border-width: 0 8px 8px 8px;
+    min-height: 80vh;
+    border-radius: 0 0 5px 5px;
+    padding: 5px;
+    color: #1f2933;
+}
+
+h2{
+    margin: 40px;
+    font-size: 4vh;
+
+}
+
+section p{
+    font-size: 3vh;
+}
+
+.buttonWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    border: none;
+    cursor: pointer;
+    background: #83e1d0;
+    padding: 25px;
+    border-radius: 16px 16px 0 0;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+button:last-child{
+    background: var(--red);
+    border-radius: 0 0 16px 16px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+input{
+    border: 1px solid lightgrey;
+    background: transparent;
+    margin: 20px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+}
+
+#range{
+    display: flex;
+    background: var(--green);
+    height: 50px;
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+#rangeOutput{
+    font-size: 15px;
+}
+
+.stats{
+    text-align: left;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info span{
+    font-size: 20px;
+}
+
+#newGameButton{
+    border-radius: 0;
+}
+
+.myProject {
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5vh;
+    margin-top: 20vh;
+}
+
+/* ANIMACIÓN */
+
+.flash{
+    animation: flash 1s infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 800px){
+    body{
+        width: 60vw;
+    }
+}
+
